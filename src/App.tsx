@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createElement as e, useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [count, setCount] = useState(0);
+  // return <h1>Hello React</h1>;
+  return e("div", { className: "container" }, [
+    e("h1", { className: "font-bold", key: 1 }, `Test JSX ${count}`),
+    e(
+      "button",
+      {
+        className: "py-2 px-4 border",
+        key: 2,
+        onClick: () => setCount(count + 1),
+      },
+      "Click me!"
+    ),
+  ]);
+  // return React.createElement("h1", {}, "Hello From JS");
 }
 
 export default App;
