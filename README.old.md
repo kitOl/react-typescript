@@ -6,3 +6,5 @@
 
 `npm install -D tailwindcss`
 `npx tailwindcss init`
+
+https://fakestoreapi.com/
