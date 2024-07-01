@@ -10,3 +10,5 @@ Coding by [video](https://youtu.be/OJ16BaPC6VI)
 `npx tailwindcss init`
 
 https://fakestoreapi.com/
+
+`npm i axios`
