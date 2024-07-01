@@ -1,5 +1,7 @@
+import CreateProduct from "./components/CreateProduct";
 import { ErrorMessage } from "./components/ErrorMessage";
 import { Loader } from "./components/Loader";
+import Modal from "./components/Modal";
 import { Product } from "./components/Product";
 import { useProducts } from "./hooks/products";
 
@@ -16,6 +18,10 @@ function App() {
 
       {/* <Product product={products[0]} />
       <Product product={products[1]} /> */}
+
+      <Modal title="Create new product">
+        <CreateProduct />
+      </Modal>
     </div>
   );
   // return React.createElement("h1", {}, "Hello From JS");
